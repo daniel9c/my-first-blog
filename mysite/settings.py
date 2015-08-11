@@ -25,6 +25,8 @@ SECRET_KEY = 'b--(opmb!8l2wdfn!8b&3c7tg+vvvts_wjg(*0#!1-0ykub&32'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+PATH_PROJECT = os.path.join(os.path.abspath(os.path.dirname(__file__)), '../')
+
 ALLOWED_HOSTS = []
 
 
@@ -100,6 +102,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+#The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = PATH_PROJECT + '/static/'
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = ()
