@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+	
+	<!-- Quando form.instance tem dados, eh uma alteracao  -->
+	{% if form.instance.author %}
+    	<h1>Alterar post</h1>    	
+    {% else %}	
+        <h1>Novo post</h1>
+    {% endif %}
+    
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Guardar</button>
+    </form>
+    
+{% endblock %}
