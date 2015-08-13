@@ -108,3 +108,5 @@ STATIC_ROOT = PATH_PROJECT + '/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = ()
+
+LOGIN_REDIRECT_URL = '/'
